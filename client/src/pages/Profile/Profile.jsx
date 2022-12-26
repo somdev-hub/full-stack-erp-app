@@ -3,9 +3,24 @@ import "./Profile.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import { info } from "../../files/info";
+import shortid from "shortid";
 
 const Profile = () => {
-  const informations=[]
+  const parameterList1 = ["Name", "Gender", "Caste", "D.O.B", "Religion"];
+  const colons = [":", ":", ":", ":", ":"];
+  const parameterList2 = [
+    "Blood Group",
+    "Mother Tongue",
+    "Redg ph. No.",
+    "Home tel no."
+  ];
+  const values = [info.name, info.gender, info.caste, info.dob, info.religion];
+  const values2 = [
+    info.blood_group,
+    info.mother_tongue,
+    info.regd,
+    info.home_contact_no
+  ];
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <Sidebar />
@@ -27,7 +42,6 @@ const Profile = () => {
               </div>
             </div>
             <div className="main-info">
-              
               <div className="data">
                 <div className="tuple1">
                   <p>Mobile Number : </p>
@@ -87,8 +101,41 @@ const Profile = () => {
                   Personal
                 </h3>
               </div>
+              <div className="profile-info-content">
+                <div className="personal-parameters">
+                  {parameterList1.map((parameter) => {
+                    return <p key={shortid.generate()}>{parameter}</p>;
+                  })}
+                </div>
+                <div className="colon">
+                  {colons.map((colon) => {
+                    return <p key={shortid.generate()}>{colon}</p>;
+                  })}
+                </div>
+                <div className="values">
+                  {values.map((value) => {
+                    return <p key={shortid.generate()}>{value}</p>;
+                  })}
+                </div>
+              </div>
             </div>
-            <div className="personal-info2"></div>
+            <div className="personal-info2">
+              <div className="personal-parameters">
+                {parameterList2.map((parameter) => {
+                  return <p key={shortid.generate()}>{parameter}</p>;
+                })}
+              </div>
+              <div className="colon">
+                {colons.map((colon) => {
+                  return <p key={shortid.generate()}>{colon}</p>;
+                })}
+              </div>
+              <div className="values">
+                {values2.map((value) => {
+                  return <p key={shortid.generate()}>{value}</p>;
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>

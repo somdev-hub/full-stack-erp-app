@@ -57,11 +57,6 @@
   margin-top: 2%;
 }
 
-.attribute {
-  font-weight: 500;
-  font-size: 18px;
-}
-
 .data {
   display: flex;
   justify-content: space-between;
@@ -86,7 +81,6 @@
 }
 .tuple1 p:nth-child(2),
 .tuple2 p:nth-child(2) {
-  /* font-weight: 500; */
   font-size: 18px;
   margin: 0;
 }
@@ -108,4 +102,50 @@
   height: 2.5rem;
   display: flex;
   align-items: center;
+}
+
+.personal-content {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.profile-info-content {
+  display: flex;
+  justify-content: space-around;
+  height: 12rem;
+}
+
+.personal-content p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.personal-content p:nth-child(1) {
+  font-weight: 500;
+}
+
+.personal-info2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.personal-parameters,
+.colon,
+.values {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.personal-parameters p {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+
+.colon p,
+.values p {
+  font-size: 18px;
+  margin: 0;
 }

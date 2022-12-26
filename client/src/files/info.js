@@ -1,5 +1,11 @@
 export const info = {
   name: "John Doe",
+  gender: "Male",
+  caste: "OBC",
+  d_o_b: "01/01/2000",
+  religion: "Hindu",
+  blood_group: "O+",
+  mother_tongue: "English",
   sic: "21BCSN80",
   regd: "2101341080",
   mobile_number: "6478234776",
