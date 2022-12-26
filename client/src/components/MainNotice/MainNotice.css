@@ -1,0 +1,109 @@
+.main-notice {
+  background: #ffffff;
+  box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+  height: 38rem;
+  width: 30rem;
+  
+}
+
+.week {
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+  padding-left: 5%;
+}
+
+.day {
+  line-height: 5px;
+  text-align: center;
+}
+
+.day p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.day h4 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.head h3 {
+  font-size: 25px;
+  font-weight: 700;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+.main-hr {
+  border-top: 3px solid rgba(117, 116, 111, 0.5);
+  height: 0;
+  width: 27rem;
+  margin-top: 3%;
+}
+
+.title-notice {
+  margin-left: 5%;
+  font-size: 18px;
+  margin-top: 5%;
+}
+
+.notice {
+  display: flex;
+  margin-left: 5%;
+  gap: 5%;
+}
+
+.notice-date {
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #5800ff;
+  border-radius: 100%;
+}
+
+.notice-date p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.notice-head h4,
+.notice-head p {
+  margin: 0;
+}
+
+.notice-attachment {
+  border: 2px solid #75746f;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 5%;
+  width: 5rem;
+  height: 20px;
+}
+
+.notice-attachment a{
+  text-decoration: none;
+}
+
+.notice-hr {
+  border-top: 1px solid #75746f80;
+  margin-top: 3%;
+  width: 27rem;
+}
+
+.head-item {
+  display: flex;
+  flex-direction: row;
+  width: 22rem;
+  justify-content: space-between;
+}
+
+/* .all-notices{
+  overflow: hidden;
+} */
