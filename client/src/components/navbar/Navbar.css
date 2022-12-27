@@ -65,7 +65,7 @@ input {
   right: 5%;
   margin-top: 1%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .navbar-profile img {

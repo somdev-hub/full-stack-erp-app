@@ -15,7 +15,8 @@ export const info = {
   home_contact_no: "6478234776",
   program: "Btech",
   branch: "Computer Science and Engineering",
-  semester: "2nd",
+  branch_short: "C.S.E",
+  semester: "3rd",
   group: 2,
   batch: "2021-2025"
 };

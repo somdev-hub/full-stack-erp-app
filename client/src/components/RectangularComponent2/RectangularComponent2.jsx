@@ -3,14 +3,20 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import "./RectangularComponent2.css";
 
 const RectangularComponent2 = (props) => {
-  const [isMousedOver, setIsMousedOver] = useState(false);
-  const mousedOver = () => {
-    setIsMousedOver(true);
-  };
   return (
-    <div className="secondary-container">
-      <div className="head-content">
-        <img src={props.img} alt="" />
+    <div
+      className="secondary-container"
+      style={
+        props.color
+          ? { backgroundColor: `${props.color}` }
+          : { backgroundColor: "#fff" }
+      }
+    >
+      <div
+        className="head-content"
+        
+      >
+        {props.img && <img src={props.img} alt="" />}
         <h5>{props.heading}</h5>
       </div>
       <div className="props-content">
