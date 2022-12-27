@@ -14,7 +14,7 @@ const Profile = () => {
     "Redg ph. No.",
     "Home tel no."
   ];
-  const values = [info.name, info.gender, info.caste, info.dob, info.religion];
+  const values = [info.name, info.gender, info.caste, info.d_o_b, info.religion];
   const values2 = [
     info.blood_group,
     info.mother_tongue,

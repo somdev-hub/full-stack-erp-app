@@ -70,7 +70,7 @@ const Subjects = () => {
             </div>
             <div className="subject-notice">
                 <div className="subject-notice-heading">
-                    
+                    <h3>Important Notices</h3>
                 </div>
             </div>
           </div>

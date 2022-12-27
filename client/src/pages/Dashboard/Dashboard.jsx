@@ -29,6 +29,8 @@ const Dashboard = () => {
                 gap: "5%"
               }}
             >
+              <a href="/attendance"style={{textDecoration: "none"}}>
+
               <RectangularComponent1
                 title="Attendance"
                 para="See your attendance report"
@@ -37,6 +39,7 @@ const Dashboard = () => {
                 progressColor="#72FFFF"
                 progressBackColor="#fff"
               />
+              </a>
               <RectangularComponent1
                 title="Fees"
                 para="See your remaining dues"
@@ -79,15 +82,16 @@ const Dashboard = () => {
                     para1="Feedback"
                     para2="Suggestions"
                   />
-                  <a href="/subjects" style={{textDecoration: "none", color: "#000"}}>
+                 
                     <RectangularComponent2
                       color="#fff"
                       img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
                       heading="Subjects"
                       para1="Feedback"
                       para2="Suggestions"
+                      link="/subjects"
                     />
-                  </a>
+                  
                   <RectangularComponent2
                     color="#fff"
                     img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"

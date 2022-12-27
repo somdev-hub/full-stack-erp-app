@@ -6,8 +6,8 @@
   text-decoration: none;
 }
 
-.secondary-container:hover{
-  background-color: #0096FF4D;
+.secondary-container:hover {
+  background-color: #0096ff4d;
 }
 
 .head-content {
@@ -26,6 +26,7 @@
 
 .props-content {
   color: #75746f;
+  width: 50%;
 }
 
 .props1,
@@ -44,4 +45,28 @@
 
 .props1 {
   margin-bottom: 2%;
+}
+
+.container-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4%;
+  align-items: flex-end;
+}
+
+.view-button {
+  height: 1.6rem;
+  width: 4.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.view-button:hover{
+  background-color: #5800FF;
+}
+
+.view-button p {
+  margin: 0;
 }
