@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 2,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 3,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 4,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 5,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 6,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 7,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 8,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 9,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  },
+  {
+    "id": 10,
+    "due": "Institute fees",
+    "addedon": "20 nov 2022",
+    "amountpaid": "30,000",
+    "amountremaining": "60,000",
+    "total": "90,000"
+  }
+]

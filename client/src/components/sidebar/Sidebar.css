@@ -1,4 +1,5 @@
 .sidebar {
+  position: fixed;
   width: 70px;
   height: 100vh;
   background: #ffffff;
@@ -9,14 +10,11 @@
 .icons {
   display: flex;
   flex-direction: column;
-  /* gap: 50%; */
-  /* justify-content: space-between; */
   align-items: center;
   padding-top: 10rem;
 }
 
 .icons > * {
-  /* width: 100px; */
   margin-bottom: 60%;
 }
 

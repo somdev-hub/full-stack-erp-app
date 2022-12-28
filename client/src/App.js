@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
 import Subjects from "./pages/Subjects/Subjects";
 import Attendance from "./pages/Attendance/Attendance";
+import Fees from "./pages/Fees/Fees";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/subjects" element={<Subjects />} />
         <Route path="/attendance" element={<Attendance />} />
+        <Route path="/fees" element={<Fees />} />
       </Routes>
     </BrowserRouter>
   );

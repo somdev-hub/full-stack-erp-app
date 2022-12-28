@@ -31,6 +31,7 @@ const Subjects = () => {
                 heading="Mathematics - III"
                 para1="Upcoming Exams"
                 para2="Modules"
+                width="25rem"
               />
               <RectangularComponent2
                 img="https://sjcit.ac.in/wp-content/uploads/2022/03/mathematics-png.jpg"
@@ -38,6 +39,7 @@ const Subjects = () => {
                 heading="OPPS"
                 para1="Upcoming Exams"
                 para2="Modules"
+                width="25rem"
               />
               <RectangularComponent2
                 img="https://sjcit.ac.in/wp-content/uploads/2022/03/mathematics-png.jpg"
@@ -45,6 +47,7 @@ const Subjects = () => {
                 heading="Data Structures"
                 para1="Upcoming Exams"
                 para2="Modules"
+                width="25rem"
               />
               <RectangularComponent2
                 img="https://sjcit.ac.in/wp-content/uploads/2022/03/mathematics-png.jpg"
@@ -52,6 +55,7 @@ const Subjects = () => {
                 heading="Digital Logic Design"
                 para1="Upcoming Exams"
                 para2="Modules"
+                width="25rem"
               />
               <RectangularComponent2
                 img="https://sjcit.ac.in/wp-content/uploads/2022/03/mathematics-png.jpg"
@@ -59,6 +63,7 @@ const Subjects = () => {
                 heading="Organisational Behaviour"
                 para1="Upcoming Exams"
                 para2="Modules"
+                width="25rem"
               />
               <RectangularComponent2
                 img="https://sjcit.ac.in/wp-content/uploads/2022/03/mathematics-png.jpg"
@@ -66,12 +71,13 @@ const Subjects = () => {
                 heading="Environmental Sciences"
                 para1="Upcoming Exams"
                 para2="Modules"
+                width="25rem"
               />
             </div>
             <div className="subject-notice">
-                <div className="subject-notice-heading">
-                    <h3>Important Notices</h3>
-                </div>
+              <div className="subject-notice-heading">
+                <h3>Important Notices</h3>
+              </div>
             </div>
           </div>
         </div>

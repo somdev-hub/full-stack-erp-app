@@ -1,0 +1,67 @@
+.fees-container {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.dues-table {
+  width: 100%;
+  height: 35rem;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 5%);
+  border: none;
+}
+
+.dues-table-head {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 5px 30px rgb(0 0 0 / 12%);
+  border-radius: 20px 20px 0px 0px;
+  border: none;
+}
+
+.payment {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3% 0;
+  /* background-color: #5800ff; */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(88, 0, 255, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 5%);
+}
+
+.payment h3 {
+  margin-left: 5%;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.payment button {
+  margin-right: 5%;
+  background: #fff;
+  height: 3rem;
+  font-size: 15px;
+  /* font-weight: 600; */
+  width: 10rem;
+  box-shadow: 0px 5px 30px rgb(0 0 0 / 12%);
+  border-radius: 15px;
+  border: none;
+}
+
+.payment button:hover {
+  background: #5800ff;
+  color: #fff;
+  transition: all 150ms ease-in-out 0s;
+}

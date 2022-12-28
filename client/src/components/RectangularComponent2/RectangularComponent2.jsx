@@ -8,8 +8,8 @@ const RectangularComponent2 = (props) => {
       className="secondary-container"
       style={
         props.color
-          ? { backgroundColor: `${props.color}` }
-          : { backgroundColor: "#fff" }
+          ? { backgroundColor: `${props.color}`, width: `${props.width}` }
+          : { backgroundColor: "#fff", width: `${props.width}` }
       }
     >
       <div className="head-content">

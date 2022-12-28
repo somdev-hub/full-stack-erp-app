@@ -29,25 +29,26 @@ const Dashboard = () => {
                 gap: "5%"
               }}
             >
-              <a href="/attendance"style={{textDecoration: "none"}}>
-
-              <RectangularComponent1
-                title="Attendance"
-                para="See your attendance report"
-                color="#5800ff"
-                progress="75"
-                progressColor="#72FFFF"
-                progressBackColor="#fff"
-              />
+              <a href="/attendance" style={{ textDecoration: "none" }}>
+                <RectangularComponent1
+                  title="Attendance"
+                  para="See your attendance report"
+                  color="#5800ff"
+                  progress="75"
+                  progressColor="#72FFFF"
+                  progressBackColor="#fff"
+                />
               </a>
-              <RectangularComponent1
-                title="Fees"
-                para="See your remaining dues"
-                color="#fff"
-                progress="75"
-                progressColor="#5800ff"
-                progressBackColor="#E8F0F2"
-              />
+              <a href="/fees">
+                <RectangularComponent1
+                  title="Fees"
+                  para="See your remaining dues"
+                  color="#fff"
+                  progress="75"
+                  progressColor="#5800ff"
+                  progressBackColor="#E8F0F2"
+                />
+              </a>
             </div>
             <div className="lists">
               <ul>
@@ -74,6 +75,7 @@ const Dashboard = () => {
                     heading="Faculty Advisor"
                     para1="Feedback"
                     para2="Suggestions"
+                    width="22rem"
                   />
                   <RectangularComponent2
                     color="#fff"
@@ -81,23 +83,26 @@ const Dashboard = () => {
                     heading="Examinations"
                     para1="Feedback"
                     para2="Suggestions"
+                    width="22rem"
                   />
-                 
-                    <RectangularComponent2
-                      color="#fff"
-                      img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
-                      heading="Subjects"
-                      para1="Feedback"
-                      para2="Suggestions"
-                      link="/subjects"
-                    />
-                  
+
+                  <RectangularComponent2
+                    color="#fff"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Subjects"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    link="/subjects"
+                    width="22rem"
+                  />
+
                   <RectangularComponent2
                     color="#fff"
                     img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
                     heading="Academic Calander"
                     para1="Feedback"
                     para2="Suggestions"
+                    width="22rem"
                   />
                 </div>
                 <div className="grid-items">
@@ -107,6 +112,7 @@ const Dashboard = () => {
                     heading="Book bank"
                     para1="Feedback"
                     para2="Suggestions"
+                    width="22rem"
                   />
                   <RectangularComponent2
                     color="#fff"
@@ -114,6 +120,7 @@ const Dashboard = () => {
                     heading="Book issue"
                     para1="Feedback"
                     para2="Suggestions"
+                    width="22rem"
                   />
                   <RectangularComponent2
                     color="#fff"
@@ -121,6 +128,7 @@ const Dashboard = () => {
                     heading="Library FIC"
                     para1="Feedback"
                     para2="Suggestions"
+                    width="22rem"
                   />
                   <RectangularComponent2
                     color="#fff"
@@ -128,6 +136,7 @@ const Dashboard = () => {
                     heading="Academic Calander"
                     para1="Feedback"
                     para2="Suggestions"
+                    width="22rem"
                   />
                 </div>
               </div>

@@ -6,7 +6,6 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-import { borderRadius } from "@mui/system";
 
 const Sidebar = () => {
   const [isClicked, setIsClicked] = useState(false);
