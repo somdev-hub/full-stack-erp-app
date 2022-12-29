@@ -6,12 +6,16 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import logo from "../../files/mainlogo.png";
 
 const Sidebar = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div className="sidebar">
+      <div className="logo">
+        <img src={logo} alt="" />
+      </div>
       <div className="icons">
         <a href="/">
           <div className="covered">

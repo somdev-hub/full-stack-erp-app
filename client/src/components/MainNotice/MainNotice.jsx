@@ -2,41 +2,56 @@ import React from "react";
 import "./MainNotice.css";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { notices } from "../../files/notices";
+import shortid from "shortid";
 
 const MainNotice = () => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  const oddMonths = [1, 3, 5, 8, 10];
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let i = -1;
+  let j = 0;
+  let overflow = false;
+  const date = new Date();
   return (
     <div className="main-notice">
       <div className="head">
-        <h3>December 2022</h3>
+        <h3>{`${months[date.getMonth()]} ${date.getFullYear()}`}</h3>
         <div className="week">
-          <div className="day">
-            <p>Mon</p>
-            <h4>12</h4>
-          </div>
-          <div className="day">
-            <p>Tue</p>
-            <h4>13</h4>
-          </div>
-          <div className="day">
-            <p>Wed</p>
-            <h4>14</h4>
-          </div>
-          <div className="day">
-            <p>Thu</p>
-            <h4>15</h4>
-          </div>
-          <div className="day">
-            <p>Fri</p>
-            <h4>16</h4>
-          </div>
-          <div className="day">
-            <p>Sat</p>
-            <h4>17</h4>
-          </div>
-          <div className="day">
-            <p>Sun</p>
-            <h4>18</h4>
-          </div>
+          {days.map((day) => {
+            i++;
+            if (
+              date.getDate() + i > 30 &&
+              oddMonths.includes(date.getMonth())
+            ) {
+              j++;
+              overflow = true;
+            } else if (
+              date.getDate() + i > 31 &&
+              !oddMonths.includes(date.getMonth())
+            ) {
+              j++;
+              overflow = true;
+            }
+            return (
+              <div className="day" key={shortid.generate()}>
+                <p>{day}</p>
+                <h4>{!overflow ? `${date.getDate() + i}` : `${j}`}</h4>
+              </div>
+            );
+          })}
         </div>
       </div>
       <hr className="main-hr" />

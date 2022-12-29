@@ -6,6 +6,20 @@
 
 }
 
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-text{
+  width: 70%;
+}
+
+.arrow{
+  margin-right: 10%;
+}
+
 .content-head {
   padding-top: 5%;
   padding-left: 10%;

@@ -50,7 +50,13 @@ const Fees = () => {
             </table>
           </div>
           <div className="payment">
-            <h3 className="payment-title">Make seamless online payments</h3>
+            <div className="text">
+              <h3 className="payment-title">Make seamless online payments</h3>
+              <p>
+                Make payments through our new online payment portal for
+                hasslefree experience
+              </p>
+            </div>
             <button>Pay online</button>
           </div>
         </div>

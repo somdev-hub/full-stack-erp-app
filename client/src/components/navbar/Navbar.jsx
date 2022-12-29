@@ -19,7 +19,7 @@ const Navbar = () => {
           style={{ display: "flex", flexDirection: "row", gap: "5%" }}
         >
           <form action="">
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" className="search"/>
           </form>
 
           <div className="profile" onClick={handleClick}>
