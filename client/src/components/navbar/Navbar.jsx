@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.reload();
+  };
   const [isExpanded, setExpanded] = useState(true);
 
   const handleClick = () => {
@@ -19,7 +23,7 @@ const Navbar = () => {
           style={{ display: "flex", flexDirection: "row", gap: "5%" }}
         >
           <form action="">
-            <input type="text" placeholder="Search" className="search"/>
+            <input type="text" placeholder="Search" className="search" />
           </form>
 
           <div className="profile" onClick={handleClick}>
@@ -52,7 +56,11 @@ const Navbar = () => {
               </div>
             </a>
             <a href="">
-              <div className="button2" style={{ border: "2px solid red" }}>
+              <div
+                className="button2"
+                style={{ border: "2px solid red" }}
+                onClick={handleLogout}
+              >
                 <p style={{ color: "red" }}>Log Out</p>
               </div>
             </a>

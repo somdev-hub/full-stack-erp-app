@@ -56,37 +56,38 @@ const MainNotice = () => {
       </div>
       <hr className="main-hr" />
       <h3 className="title-notice">Notices</h3>
-
-      {notices.map((notice) => {
-        return (
-          <div className="notice-container" key={notice._id}>
-            <div className="notice">
-              <div className="notice-date">
-                <p>{notice.noticeDate.date}</p>
-                <p>{notice.noticeDate.month}</p>
-              </div>
-              <div className="notice-head">
-                <div className="head-item">
-                  <div className="notice-text">
-                    <h4 style={{ fontSize: "18px", marginBottom: "2%" }}>
-                      {notice.heading}
-                    </h4>
-                    <p>{notice.description}</p>
+      <div className="all-notice">
+        {notices.map((notice) => {
+          return (
+            <div className="notice-container" key={notice._id}>
+              <div className="notice">
+                <div className="notice-date">
+                  <p>{notice.noticeDate.date}</p>
+                  <p>{notice.noticeDate.month}</p>
+                </div>
+                <div className="notice-head">
+                  <div className="head-item">
+                    <div className="notice-text">
+                      <h4 style={{ fontSize: "18px", marginBottom: "2%" }}>
+                        {notice.heading}
+                      </h4>
+                      <p>{notice.description}</p>
+                    </div>
+                    <ArrowForwardIosOutlinedIcon />
                   </div>
-                  <ArrowForwardIosOutlinedIcon />
-                </div>
-                <div className="notice-attachment">
-                  <a href={notice.attachment.content} target="_blank">
-                    <p>{notice.attachment.type}</p>
-                  </a>
+                  <div className="notice-attachment">
+                    <a href={notice.attachment.content} target="_blank">
+                      <p>{notice.attachment.type}</p>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <hr className="notice-hr" />
-          </div>
-        );
-      })}
+              <hr className="notice-hr" />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

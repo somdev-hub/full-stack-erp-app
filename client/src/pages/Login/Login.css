@@ -1,3 +1,7 @@
+button{
+  cursor: pointer;
+}
+
 /* .login-container, */
 .form-container,
 .login-form,
@@ -8,7 +12,6 @@
 .sign-up,
 .img-container {
   display: flex;
-  /* flex-direction: column; */
 }
 
 .login-container {
@@ -26,6 +29,10 @@
   align-items: center;
 }
 
+.login-header{
+  margin-bottom: 5%;
+}
+
 .login-form {
   width: 70%;
   height: 30rem;
@@ -41,8 +48,8 @@
 }
 
 .login-form form {
-  height: 10rem;
-  justify-content: space-evenly;
+  height: 20rem;
+  justify-content: space-around;
   flex-direction: column;
   gap: 5%;
   width: 100%;

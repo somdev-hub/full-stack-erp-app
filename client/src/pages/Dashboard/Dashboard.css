@@ -62,6 +62,6 @@ a {
 }
 
 .notice-section {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 40%;
 }

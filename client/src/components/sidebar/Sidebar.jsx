@@ -13,9 +13,11 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <div className="logo">
-        <img src={logo} alt="" />
-      </div>
+      <a href="/about-us">
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
+      </a>
       <div className="icons">
         <a href="/">
           <div className="covered">
