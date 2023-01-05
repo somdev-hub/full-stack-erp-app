@@ -113,6 +113,10 @@ button{
   color: #fff;
 }
 
+.login-button:hover{
+  background-color: pink;
+}
+
 .google-button,
 .sign-up {
   border: 2px solid #000;

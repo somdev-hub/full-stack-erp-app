@@ -7,19 +7,20 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import logo from "../../files/mainlogo.png";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div className="sidebar">
-      <a href="/about-us">
+      <NavLink to="/about-us">
         <div className="logo">
           <img src={logo} alt="" />
         </div>
-      </a>
+      </NavLink>
       <div className="icons">
-        <a href="/">
+        <NavLink to="/">
           <div className="covered">
             <HomeOutlinedIcon
               style={{
@@ -29,7 +30,7 @@ const Sidebar = () => {
               }}
             />
           </div>
-        </a>
+        </NavLink>
         <div className="">
           <CalendarMonthOutlinedIcon style={{ fontSize: "30px" }} />
         </div>

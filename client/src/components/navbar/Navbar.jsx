@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const handleLogout = () => {
@@ -50,12 +51,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar-buttons">
-            <a href="/profile">
+            <NavLink to="/profile">
               <div className="button1" style={{ border: "2px solid black" }}>
                 <p style={{ color: "#000" }}>View Profile</p>
               </div>
-            </a>
-            <a href="">
+            </NavLink>
+            <NavLink to="">
               <div
                 className="button2"
                 style={{ border: "2px solid red" }}
@@ -63,7 +64,7 @@ const Navbar = () => {
               >
                 <p style={{ color: "red" }}>Log Out</p>
               </div>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

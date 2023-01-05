@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Subjects.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import { info } from "../../files/info";
+// import info from "../../files/info";
 import RectangularComponent2 from "../../components/RectangularComponent2/RectangularComponent2";
+import axios from "axios";
+import { useEffect } from "react";
 
 const Subjects = () => {
-  // const details = []
+  const [info, setInfoData] = useState({});
+  const fetchInfo = async () => {
+    const email = localStorage.getItem("email");
+    const url = `http://localhost:5000/api/getUserData/${email}`;
+    await axios.get(url).then((res) => {
+      setInfoData(info => ({
+        ...info,
+        ...res.data
+      }));
+    });
+  };
+
+  useEffect(() => {
+    fetchInfo();
+  }, []);
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <Sidebar />
@@ -16,7 +32,7 @@ const Subjects = () => {
           <h3 className="your-profile">Your Subjects</h3>
           <div className="basic-details">
             <ul>
-              <li>{info.name}</li>
+              <li>{info.full_name}</li>
               <li>SIC - {info.sic}</li>
               <li>Registration No. - {info.regd}</li>
               <li>Branch- {info.branch_short}</li>

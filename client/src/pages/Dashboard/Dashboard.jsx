@@ -5,6 +5,7 @@ import "./Dashboard.css";
 import RectangularComponent1 from "../../components/RectangularComponent1/RectangularComponent1";
 import RectangularComponent2 from "../../components/RectangularComponent2/RectangularComponent2";
 import MainNotice from "../../components/MainNotice/MainNotice";
+import {NavLink} from 'react-router-dom'
 
 const Dashboard = () => {
   const [isTranslate, setTranslate] = useState(false);
@@ -29,7 +30,7 @@ const Dashboard = () => {
                 gap: "5%"
               }}
             >
-              <a href="/attendance" style={{ textDecoration: "none" }}>
+              <NavLink to="/attendance" style={{ textDecoration: "none" }}>
                 <RectangularComponent1
                   title="Attendance"
                   para="See your attendance report"
@@ -38,8 +39,8 @@ const Dashboard = () => {
                   progressColor="#72FFFF"
                   progressBackColor="#fff"
                 />
-              </a>
-              <a href="/fees">
+              </NavLink>
+              <NavLink to="/fees">
                 <RectangularComponent1
                   title="Fees"
                   para="See your remaining dues"
@@ -48,7 +49,7 @@ const Dashboard = () => {
                   progressColor="#5800ff"
                   progressBackColor="#E8F0F2"
                 />
-              </a>
+              </NavLink>
             </div>
             <div className="lists">
               <ul>

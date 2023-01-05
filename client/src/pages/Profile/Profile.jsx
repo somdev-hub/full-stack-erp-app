@@ -1,11 +1,32 @@
-import React from "react";
+import { useState, React } from "react";
 import "./Profile.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import { info } from "../../files/info";
 import shortid from "shortid";
+import axios from "axios";
+import { useEffect } from "react";
+// import info from "../../files/Info";
 
 const Profile = () => {
+
+  const [info, setInfoData] = useState({});
+  const fetchInfo = async () => {
+    const email = localStorage.getItem("email");
+    const url = `http://localhost:5000/api/getUserData/${email}`;
+    await axios.get(url).then((res) => {
+      setInfoData(info => ({
+        ...info,
+        ...res.data
+      }));
+    });
+  };
+
+  useEffect(() => {
+    fetchInfo();
+  }, []);
+
+
+
   const parameterList1 = ["Name", "Gender", "Caste", "D.O.B", "Religion"];
   const colons = [":", ":", ":", ":", ":"];
   const parameterList2 = [
@@ -14,7 +35,13 @@ const Profile = () => {
     "Redg ph. No.",
     "Home tel no."
   ];
-  const values = [info.name, info.gender, info.caste, info.d_o_b, info.religion];
+  const values = [
+    info.full_name,
+    info.gender,
+    info.caste,
+    info.d_o_b,
+    info.religion
+  ];
   const values2 = [
     info.blood_group,
     info.mother_tongue,

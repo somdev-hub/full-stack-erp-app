@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import "./RectangularComponent2.css";
+import { NavLink } from "react-router-dom";
 
 const RectangularComponent2 = (props) => {
   return (
@@ -27,7 +28,7 @@ const RectangularComponent2 = (props) => {
             <p>{props.para2}</p>
           </div>
         </div>
-        <a href={props.link}>
+        <NavLink to={props.link}>
           <div
             className="view-button"
             style={
@@ -43,7 +44,7 @@ const RectangularComponent2 = (props) => {
           >
             <p>view</p>
           </div>
-        </a>
+        </NavLink>
       </div>
     </div>
   );
