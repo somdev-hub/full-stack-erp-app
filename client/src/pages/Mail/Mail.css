@@ -1,0 +1,134 @@
+.mail-container h4,
+.mail-container h5,
+.mail-container p {
+  margin: 0;
+}
+
+.mail-container {
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 90%;
+}
+
+.mail-content {
+  width: 100%;
+  height: 77vh;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+.mail-head {
+  height: 30%;
+}
+
+.mail-head h4 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.from-to {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 3%;
+  padding-top: 2%;
+  justify-content: space-around;
+}
+
+.clickable-container {
+  filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+  background: #5800ff;
+  color: #fff;
+  border-radius: 20px;
+  width: 10rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+}
+
+.from-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.from {
+  display: flex;
+  height: 50%;
+  justify-content: space-between;
+}
+
+.clickable-container h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mail-buttons {
+  display: flex;
+  gap: 3%;
+  width: 12%;
+  justify-content: space-between;
+}
+
+.mail-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5800ff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+}
+
+.mail-body {
+  margin: 5% 3%;
+}
+
+.mail-body p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.attachments {
+  display: flex;
+  gap: 1%;
+  margin-left: 3%;
+  align-items: center;
+}
+
+.download-circle {
+  background: #ffffff;
+  border: 2px solid #000000;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.attachment {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  width: 10rem;
+  height: 2.2rem;
+}
+
+.download-circle,
+.attachment {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

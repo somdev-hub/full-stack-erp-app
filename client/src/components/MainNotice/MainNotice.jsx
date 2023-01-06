@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./MainNotice.css";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import { notices } from "../../files/notices";
+// import { notices } from "../../files/notices";
 import shortid from "shortid";
+import axios from "axios";
 
 const MainNotice = () => {
+  const [notices, setNotices] = useState([]);
+  const fetchNotices = async () => {
+    try {
+      await axios.get("http://localhost:5000/api/getMainNotice").then((res) => {
+        setNotices(res.data);
+      });
+    } catch (error) {
+      console.log("====================================");
+      console.log(error);
+      console.log("====================================");
+    }
+  };
+
+  useEffect(() => {
+    fetchNotices();
+  }, []);
+
+  const viewNotice = (e) => {
+    console.log(e.target.value);
+  }
   const months = [
     "January",
     "February",
@@ -25,6 +46,7 @@ const MainNotice = () => {
   let j = 0;
   let overflow = false;
   const date = new Date();
+  if (!notices.length) return <div className="main-notice">Loading...</div>;
   return (
     <div className="main-notice">
       <div className="head">
@@ -59,7 +81,7 @@ const MainNotice = () => {
       <div className="all-notice">
         {notices.map((notice) => {
           return (
-            <div className="notice-container" key={notice._id}>
+            <div className="notice-container" key={notice._id} onClick={()=>{console.log(notice._id);}}>
               <div className="notice">
                 <div className="notice-date">
                   <p>{notice.noticeDate.date}</p>
@@ -71,13 +93,13 @@ const MainNotice = () => {
                       <h4 style={{ fontSize: "18px", marginBottom: "2%" }}>
                         {notice.heading}
                       </h4>
-                      <p>{notice.description}</p>
+                      <p>{`${notice.description.substring(0, 40)}...`}</p>
                     </div>
                     <ArrowForwardIosOutlinedIcon />
                   </div>
                   <div className="notice-attachment">
-                    <a href={notice.attachment.content} target="_blank">
-                      <p>{notice.attachment.type}</p>
+                    <a href={notice.attachment} target="_blank">
+                      <p>{notice.attachment_type}</p>
                     </a>
                   </div>
                 </div>

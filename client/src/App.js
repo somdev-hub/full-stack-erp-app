@@ -7,6 +7,7 @@ import Attendance from "./pages/Attendance/Attendance";
 import Fees from "./pages/Fees/Fees";
 import Login from "./pages/Login/Login";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import Mail from "./pages/Mail/Mail";
 
 function App() {
   const user = localStorage.getItem("token");
@@ -21,6 +22,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" exact element={<Navigate replace to="/login" />} />
         <Route path="/about-us" exact element={<AboutUs />} />
+        <Route path="/mail" exact element={<Mail />} />
+
       </Routes>
     </BrowserRouter>
   );

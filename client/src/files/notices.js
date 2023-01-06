@@ -11,7 +11,9 @@ export const notices = [
       type: "image",
       content:
         "https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
-    }
+    },
+    from: "Information Cell",
+    to: "Students, Staffs"
   },
   {
     _id: 2,
@@ -25,7 +27,9 @@ export const notices = [
       type: "image",
       content:
         "https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
-    }
+    },
+    from: "Information Cell",
+    to: "Students, Staffs"
   },
   {
     _id: 3,
@@ -39,6 +43,8 @@ export const notices = [
       type: "image",
       content:
         "https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
-    }
+    },
+    from: "Information Cell",
+    to: "Students, Staffs"
   }
 ];
