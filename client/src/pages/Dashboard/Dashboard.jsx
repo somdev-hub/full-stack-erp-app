@@ -4,8 +4,8 @@ import Navbar from "../../components/navbar/Navbar";
 import "./Dashboard.css";
 import RectangularComponent1 from "../../components/RectangularComponent1/RectangularComponent1";
 import RectangularComponent2 from "../../components/RectangularComponent2/RectangularComponent2";
-import MainNotice from "../../components/MainNotice/MainNotice";
-import {NavLink} from 'react-router-dom'
+import { MainNotice } from "../../components/MainNotice/MainNotice";
+import { NavLink } from "react-router-dom";
 
 const Dashboard = () => {
   const [isTranslate, setTranslate] = useState(false);

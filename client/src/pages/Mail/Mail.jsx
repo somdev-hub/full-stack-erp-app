@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Mail.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
@@ -7,8 +7,35 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import MenuIcon from "@mui/icons-material/Menu";
 import DownloadIcon from "@mui/icons-material/Download";
 import CropOriginalIcon from "@mui/icons-material/CropOriginal";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import reactStringReplace from "react-string-replace";
+// import { MainNotice } from "../../components/MainNotice/MainNotice";
 
 const Mail = () => {
+  const { id } = useParams();
+  console.log(id);
+  const [primaryNotice, setPrimaryNotice] = useState({});
+  const fetchPrimaryNotice = async () => {
+    try {
+      await axios
+        .get(`http://localhost:5000/api/getNotice/${id}`)
+        .then((res) => {
+          setPrimaryNotice((primaryNotice) => ({
+            ...primaryNotice,
+            ...res.data
+          }));
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPrimaryNotice();
+  }, []);
+  // console.log(primaryNotice.heading);
+
   return (
     <div style={{ display: "flex" }}>
       <Sidebar />
@@ -22,7 +49,7 @@ const Mail = () => {
                   <div className="from-content">
                     <h4>From</h4>
                     <div className="clickable-container">
-                      <h3>Information Cell</h3>
+                      <h3>{primaryNotice.from}</h3>
                     </div>
                   </div>
                   <div className="mail-buttons">
@@ -40,41 +67,32 @@ const Mail = () => {
                 <div className="to">
                   <h4>To</h4>
                   <div className="clickable-container">
-                    <h3>Students, Staffs ...</h3>
+                    <h3>{primaryNotice.to}</h3>
                   </div>
                 </div>
               </div>
             </div>
             <div className="mail-body">
-              {/* <h5>Hello Everyone</h5> */}
               <p>
-                <b>Hello Everyone</b>
-                <br />
-                <br />
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet,
-                perferendis ipsa nobis praesentium eveniet aspernatur,
-                dignissimos magnam assumenda sunt in tenetur commodi, laboriosam
-                obcaecati harum eum. Exercitationem quod incidunt obcaecati,
-                repellat animi ea tempora consequatur aliquam velit temporibus
-                eius hic rem cum corrupti voluptatum dolorem facilis, ullam
-                veritatis. Excepturi, officia.
-                <br />
-                <br />
-                <p>
-                  Cc: <br />
-                  All notice boards <br />
-                  All HODS
-                </p>
+                {reactStringReplace(
+                  primaryNotice.description,
+                  "\n",
+                  (match, i) => {
+                    <span>{match}</span>;
+                  }
+                )}
               </p>
             </div>
             <div className="attachments">
               <div className="download-circle">
                 <DownloadIcon style={{ fontSize: "2rem" }} />
               </div>
-              <div className="attachment">
-                <CropOriginalIcon style={{ fontSize: "2rem" }} />{" "}
-                <p style={{ fontSize: "22px" }}>Image</p>
-              </div>
+              <a href={primaryNotice.attachment} target="_blank">
+                <div className="attachment" style={{ color: "#000" }}>
+                  <CropOriginalIcon style={{ fontSize: "2rem" }} />{" "}
+                  <p style={{ fontSize: "22px" }}>Image</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>

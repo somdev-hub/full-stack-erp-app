@@ -22,7 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" exact element={<Navigate replace to="/login" />} />
         <Route path="/about-us" exact element={<AboutUs />} />
-        <Route path="/mail" exact element={<Mail />} />
+        <Route path="/mail/:id" exact element={<Mail />} />
 
       </Routes>
     </BrowserRouter>

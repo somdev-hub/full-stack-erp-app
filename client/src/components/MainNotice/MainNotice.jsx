@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import "./MainNotice.css";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 // import { notices } from "../../files/notices";
 import shortid from "shortid";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
+const selectNotice = createContext();
 const MainNotice = () => {
   const [notices, setNotices] = useState([]);
+  const navigate = useNavigate();
   const fetchNotices = async () => {
     try {
       await axios.get("http://localhost:5000/api/getMainNotice").then((res) => {
@@ -23,9 +26,6 @@ const MainNotice = () => {
     fetchNotices();
   }, []);
 
-  const viewNotice = (e) => {
-    console.log(e.target.value);
-  }
   const months = [
     "January",
     "February",
@@ -81,15 +81,20 @@ const MainNotice = () => {
       <div className="all-notice">
         {notices.map((notice) => {
           return (
-            <div className="notice-container" key={notice._id} onClick={()=>{console.log(notice._id);}}>
+            <div className="notice-container" key={notice._id}>
               <div className="notice">
                 <div className="notice-date">
                   <p>{notice.noticeDate.date}</p>
                   <p>{notice.noticeDate.month}</p>
                 </div>
-                <div className="notice-head">
+                <div
+                  className="notice-head"
+                  
+                >
                   <div className="head-item">
-                    <div className="notice-text">
+                    <div className="notice-text" onClick={() => {
+                    navigate(`/mail/${notice._id}`);
+                  }}>
                       <h4 style={{ fontSize: "18px", marginBottom: "2%" }}>
                         {notice.heading}
                       </h4>
@@ -107,6 +112,7 @@ const MainNotice = () => {
 
               <hr className="notice-hr" />
             </div>
+            // </selectNotice.Provider>
           );
         })}
       </div>
@@ -114,4 +120,4 @@ const MainNotice = () => {
   );
 };
 
-export default MainNotice;
+export { MainNotice, selectNotice };

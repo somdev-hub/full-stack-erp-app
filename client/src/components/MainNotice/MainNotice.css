@@ -48,6 +48,10 @@
   margin-top: 5%;
 }
 
+.notice-container{
+  cursor: pointer;
+}
+
 .notice {
   display: flex;
   margin-left: 5%;
