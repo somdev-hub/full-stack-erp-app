@@ -1,0 +1,109 @@
+.cafeteria-table {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.table-navbar {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 2% 5% 0 5%; */
+  padding-top: 2%;
+  width: 95%;
+  align-items: center;
+}
+
+.table-navbar h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.table-options {
+  display: flex;
+  /* justify-content: space-between; */
+  /* width: 20%; */
+  gap: 5%;
+  margin-right: 3%;
+}
+
+.table-options input {
+  border: 2px solid rgba(117, 116, 111, 0.75);
+  border-radius: 5px;
+  background: none;
+  height: 25px;
+}
+
+.filter {
+  display: flex;
+}
+
+.filter p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.upload-button {
+  border: 2px solid rgba(117, 116, 111, 0.75);
+  border-radius: 5px;
+  height: 30px;
+}
+
+.cafe-table {
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cafe-table thead {
+  background: #ffffff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  height: 3.5rem;
+  width: 95%;
+  margin-top: 3%;
+  border: none;
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.cafe-table thead tr {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.cafe-table tbody {
+  height: 0;
+  margin-top: 3%;
+  width: 95%;
+}
+
+.cafe-table tbody tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+.select {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #75746f;
+  border-radius: 5px;
+}
+
+.add-control {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  gap: 15%;
+}
+
+.cafe-data {
+}

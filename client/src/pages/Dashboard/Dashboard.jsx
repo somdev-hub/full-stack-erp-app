@@ -8,10 +8,26 @@ import { MainNotice } from "../../components/MainNotice/MainNotice";
 import { NavLink } from "react-router-dom";
 
 const Dashboard = () => {
-  const [isTranslate, setTranslate] = useState(false);
+  const expandList = {
+    academics: true,
+    library: false,
+    canteen: false,
+    hostel: false,
+    fees: false
+  };
+  const [isExpand, setExpand] = useState(expandList);
 
-  const clicked = () => {
-    setTranslate(!isTranslate);
+  const expand = (e) => {
+    const name = e.target.innerText.toLowerCase();
+    const temp = { ...isExpand };
+    for (let key in temp) {
+      if (key === name) {
+        temp[key] = true;
+      } else {
+        temp[key] = false;
+      }
+    }
+    setExpand(temp);
   };
 
   return (
@@ -53,23 +69,45 @@ const Dashboard = () => {
             </div>
             <div className="lists">
               <ul>
-                <li style={{ fontWeight: "bold" }}>Academics</li>
-                <li onClick={clicked} style={{ cursor: "pointer" }}>
+                <li
+                  style={isExpand.academics ? { fontWeight: "bold" } : null}
+                  onClick={expand}
+                >
+                  Academics
+                </li>
+                <li
+                  style={isExpand.library ? { fontWeight: "bold" } : null}
+                  onClick={expand}
+                >
                   Library
                 </li>
-                <li>Canteen</li>
-                <li>Hostel</li>
-                <li>Fees</li>
+                <li
+                  style={isExpand.canteen ? { fontWeight: "bold" } : null}
+                  onClick={expand}
+                >
+                  Canteen
+                </li>
+                <li
+                  style={isExpand.hostel ? { fontWeight: "bold" } : null}
+                  onClick={expand}
+                >
+                  Hostel
+                </li>
+                <li
+                  style={isExpand.fees ? { fontWeight: "bold" } : null}
+                  onClick={expand}
+                >
+                  Fees
+                </li>
               </ul>
             </div>
             <div className="view-box">
-              <div
-                className="topics"
-                style={
-                  isTranslate ? { transform: "translateX(-49.5rem)" } : null
-                }
-              >
-                <div className="grid-items">
+              <div className="topics" style={{ transition: "visibility 1s" }}>
+                <div
+                  className={`grid-items ${
+                    isExpand.academics ? "grid-items-show" : "grid-items-hide"
+                  }`}
+                >
                   <RectangularComponent2
                     color="#0096FF4D"
                     img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
@@ -86,7 +124,6 @@ const Dashboard = () => {
                     para2="Suggestions"
                     width="22rem"
                   />
-
                   <RectangularComponent2
                     color="#fff"
                     img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
@@ -96,7 +133,6 @@ const Dashboard = () => {
                     link="/subjects"
                     width="22rem"
                   />
-
                   <RectangularComponent2
                     color="#fff"
                     img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
@@ -106,7 +142,88 @@ const Dashboard = () => {
                     width="22rem"
                   />
                 </div>
-                <div className="grid-items">
+                <div
+                  className={`grid-items ${
+                    isExpand.library ? "grid-items-show" : "grid-items-hide"
+                  }`}
+                >
+                  <RectangularComponent2
+                    color="#0096FF4D"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Book bank"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                  />
+                  <RectangularComponent2
+                    color="#fff"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Book issue"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                  />
+                  <RectangularComponent2
+                    color="#fff"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Library FIC"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                  />
+                  <RectangularComponent2
+                    color="#fff"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Academic Calander"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                  />
+                </div>
+                <div
+                  className={`grid-items ${
+                    isExpand.canteen ? "grid-items-show" : "grid-items-hide"
+                  }`}
+                >
+                  <RectangularComponent2
+                    color="#0096FF4D"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Mess and Dining"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                  />
+                  <RectangularComponent2
+                    color="#fff"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Cafeteria"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                    link="/cafeteria"
+                  />
+                  <RectangularComponent2
+                    color="#fff"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="Mess Menu"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                  />
+                  <RectangularComponent2
+                    color="#fff"
+                    img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"
+                    heading="View All"
+                    para1="Feedback"
+                    para2="Suggestions"
+                    width="22rem"
+                  />
+                </div>
+                <div
+                  className={`grid-items ${
+                    isExpand.hostel ? "grid-items-show" : "grid-items-hide"
+                  }`}
+                >
                   <RectangularComponent2
                     color="#0096FF4D"
                     img="https://img.freepik.com/free-photo/sexy-american-man-clasped-his-hands-seriously-looks-camera_8353-9941.jpg?w=2000"

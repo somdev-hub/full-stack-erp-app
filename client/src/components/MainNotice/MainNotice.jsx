@@ -1,7 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import "./MainNotice.css";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-// import { notices } from "../../files/notices";
 import shortid from "shortid";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -16,9 +15,7 @@ const MainNotice = () => {
         setNotices(res.data);
       });
     } catch (error) {
-      console.log("====================================");
       console.log(error);
-      console.log("====================================");
     }
   };
 
@@ -87,14 +84,14 @@ const MainNotice = () => {
                   <p>{notice.noticeDate.date}</p>
                   <p>{notice.noticeDate.month}</p>
                 </div>
-                <div
-                  className="notice-head"
-                  
-                >
+                <div className="notice-head">
                   <div className="head-item">
-                    <div className="notice-text" onClick={() => {
-                    navigate(`/mail/${notice._id}`);
-                  }}>
+                    <div
+                      className="notice-text"
+                      onClick={() => {
+                        navigate(`/mail/${notice._id}`);
+                      }}
+                    >
                       <h4 style={{ fontSize: "18px", marginBottom: "2%" }}>
                         {notice.heading}
                       </h4>
@@ -112,7 +109,6 @@ const MainNotice = () => {
 
               <hr className="notice-hr" />
             </div>
-            // </selectNotice.Provider>
           );
         })}
       </div>

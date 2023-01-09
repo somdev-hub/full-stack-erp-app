@@ -20,7 +20,7 @@ const Attendance = () => {
         <div className="attendance-container">
           <h3 className="your-profile">Your Attendance</h3>
           <div className="attandance-table">
-            <table {...getTableProps()}>
+            <table {...getTableProps()} className="attandence-table">
               <thead>
                 {headerGroups.map((headerGroup) => (
                   <tr {...headerGroup.getHeaderGroupProps()}>
@@ -32,11 +32,11 @@ const Attendance = () => {
                   </tr>
                 ))}
               </thead>
-              <tbody {...getTableBodyProps()}>
+              <tbody {...getTableBodyProps()} className="attendance-tbody">
                 {rows.map((row) => {
                   prepareRow(row);
                   return (
-                    <tr {...row.getRowProps()}>
+                    <tr {...row.getRowProps()} className="attendance-tr">
                       {row.cells.map((cell) => {
                         return (
                           <td {...cell.getCellProps()}>

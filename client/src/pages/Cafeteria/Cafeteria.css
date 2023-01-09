@@ -1,0 +1,51 @@
+.cafeteria-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.cafeteria-main h3,
+.cafeteria-main h2,
+.cafeteria-main p {
+  margin: 0;
+}
+
+.your-order {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #0061ff 0%, #60efff 100%);
+  border-radius: 20px;
+  height: 7rem;
+  color: #fff;
+  padding: 0 3%;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.order-head h3 {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.order-head p {
+  font-size: 18px;
+}
+
+.waiting-time {
+  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.cafeteria-menu h3 {
+  margin-top: 2%;
+}
+
+.cafeteria-menu-items {
+  margin-top: 3%;
+  display: flex;
+  gap: 3%;
+}
+
+.item-table{
+  margin-top: 5%;
+}

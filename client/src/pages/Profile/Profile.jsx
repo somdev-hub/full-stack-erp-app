@@ -5,16 +5,14 @@ import Navbar from "../../components/navbar/Navbar";
 import shortid from "shortid";
 import axios from "axios";
 import { useEffect } from "react";
-// import info from "../../files/Info";
 
 const Profile = () => {
-
   const [info, setInfoData] = useState({});
   const fetchInfo = async () => {
     const email = localStorage.getItem("email");
     const url = `http://localhost:5000/api/getUserData/${email}`;
     await axios.get(url).then((res) => {
-      setInfoData(info => ({
+      setInfoData((info) => ({
         ...info,
         ...res.data
       }));
@@ -24,8 +22,6 @@ const Profile = () => {
   useEffect(() => {
     fetchInfo();
   }, []);
-
-
 
   const parameterList1 = ["Name", "Gender", "Caste", "D.O.B", "Religion"];
   const colons = [":", ":", ":", ":", ":"];
