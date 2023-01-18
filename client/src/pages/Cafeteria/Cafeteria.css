@@ -3,6 +3,10 @@
   margin-left: 5%;
 }
 
+.cafeteria-main {
+  position: relative;
+}
+
 .cafeteria-main h3,
 .cafeteria-main h2,
 .cafeteria-main p {
@@ -46,6 +50,37 @@
   gap: 3%;
 }
 
-.item-table{
+.item-table {
   margin-top: 5%;
+}
+
+.cart {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-button {
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: #0061ff;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  right: 0;
+}
+
+.cart-content {
+  height: 30rem;
+  width: 15rem;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+  border-radius: 20px;
+  margin-bottom: 5%;
 }

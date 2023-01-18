@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5%;
   /* justify-content: center; */
 }
 
@@ -51,12 +52,14 @@
   border: 2px solid rgba(117, 116, 111, 0.75);
   border-radius: 5px;
   height: 30px;
+  background: none;
 }
 
 .cafe-table {
   border: none;
   width: 100%;
   display: flex;
+  margin-top: 3%;
   flex-direction: column;
   align-items: center;
 }
@@ -67,7 +70,7 @@
   border-radius: 10px;
   height: 3.5rem;
   width: 95%;
-  margin-top: 3%;
+
   border: none;
   height: 10%;
   display: flex;
@@ -81,9 +84,12 @@
 }
 
 .cafe-table tbody {
-  height: 0;
-  margin-top: 3%;
+  margin-top: 1%;
   width: 95%;
+  display: flex;
+  gap: 5%;
+  overflow: auto;
+  justify-content: space-between;
 }
 
 .cafe-table tbody tr {
@@ -91,11 +97,62 @@
   justify-content: space-around;
 }
 
-.select {
-  width: 20px;
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox .select {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 20px;
-  border: 2px solid #75746f;
+  width: 20px;
+  border: 2px solid rgba(117, 116, 111, 0.75);
   border-radius: 5px;
+  background-color: #eee;
+}
+
+.checkmark:after {
+  content: "";
+  display: none;
+  position: absolute;
+}
+
+.checkbox .select:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .select:checked ~ .checkmark {
+  background-color: #0061ff;
+}
+
+.checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .add-control {
@@ -105,5 +162,17 @@
   gap: 15%;
 }
 
+.cafe-table tbody::-webkit-scrollbar {
+  display: none;
+}
+
 .cafe-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }

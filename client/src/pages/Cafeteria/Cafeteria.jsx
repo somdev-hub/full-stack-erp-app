@@ -4,6 +4,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import CafeteriaTable from "../../components/CafeteriaTable/CafeteriaTable";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Cafeteria = () => {
   return (
@@ -59,7 +60,15 @@ const Cafeteria = () => {
               </div>
             </div>
             <div className="item-table">
-              <CafeteriaTable/>
+              <CafeteriaTable />
+            </div>
+            <div className="cart">
+              <div className="cart-content">
+                content
+              </div>
+              <div className="cart-button">
+                <ShoppingCartIcon />
+              </div>
             </div>
           </div>
         </div>

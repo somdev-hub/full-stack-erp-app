@@ -4,8 +4,21 @@ import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { cafeData } from "../../files/cafe";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import { useState } from "react";
 
 const CafeteriaTable = () => {
+  const [checked, setChecked] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+  const updateQuantity = (e) => {
+    setQuantity((quantity) => quantity + 1);
+    console.log(quantity);
+  };
+  const deleteQuantity = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
   const tableHead = [
     "Select",
     "Sl no",
@@ -41,42 +54,48 @@ const CafeteriaTable = () => {
         <tbody>
           {cafeData.map((item, index) => {
             return (
-              <>
               <tr className="cafe-data" key={index}>
-                <td>
-                  <div className="select"></div>
-                </td>
-                <td>{index + 1}</td>
-                <td>{item.item}</td>
-                <td>{item.price}</td>
-                <td>{item.availablity}</td>
-                <td>
-                  <div className="add-control">
-                    <RemoveCircleIcon style={{ cursor: "pointer" }} />
-                    <p>0</p>
-                    <AddCircleIcon style={{ cursor: "pointer" }} />
-                  </div>
-                </td>
+                <div className="row-content">
+                  <td>
+                    {/* <div
+                      className="select"
+                      onClick={() => {
+                        setChecked(!checked);
+                      }}
+                    >
+                      {checked ? <CheckBoxIcon /> : null}
+                    </div> */}
+                    <label htmlFor="" className="checkbox">
+                      <input type="checkbox" className="select" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>{index + 1}</td>
+                  <td>{item.item}</td>
+                  <td>{`Rs. ${item.price}/-`}</td>
+                  <td>{item.availablity}</td>
+                  <td>
+                    <div className="add-control">
+                      <RemoveCircleIcon
+                        style={{ cursor: "pointer" }}
+                        onClick={deleteQuantity}
+                      />
+                      <p>{quantity}</p>
+                      <AddCircleIcon
+                        style={{ cursor: "pointer" }}
+                        onClick={updateQuantity}
+                      />
+                    </div>
+                  </td>
+                </div>
+                <hr
+                  style={{
+                    width: "100%"
+                  }}
+                />
               </tr>
-              </>
             );
           })}
-          {/* <tr className="cafe-data">
-            <td>
-              <div className="select"></div>
-            </td>
-            <td>1</td>
-            <td>Chips</td>
-            <td>Rs. 10/-</td>
-            <td>Available</td>
-            <td>
-              <div className="add-control">
-                <RemoveCircleIcon style={{ cursor: "pointer" }} />
-                <p>0</p>
-                <AddCircleIcon style={{ cursor: "pointer" }} />
-              </div>
-            </td>
-          </tr> */}
         </tbody>
       </table>
     </div>
