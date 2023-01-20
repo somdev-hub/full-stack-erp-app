@@ -5,8 +5,10 @@ import Navbar from "../../components/navbar/Navbar";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import CafeteriaTable from "../../components/CafeteriaTable/CafeteriaTable";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { cart, menuItems } from "../../files/cart";
 
 const Cafeteria = () => {
+  const [cartClicked, setCartClicked] = React.useState(false);
   return (
     <div style={{ display: "flex" }}>
       <Sidebar />
@@ -27,46 +29,73 @@ const Cafeteria = () => {
             <div className="cafeteria-menu">
               <h3>Today's menu</h3>
               <div className="cafeteria-menu-items">
-                <MenuItem
-                  image="https://recipes.net/wp-content/uploads/2021/10/masala-dosa-recipe-1024x576.jpg"
-                  item="Dosa"
-                  price="30.00"
-                />
-                <MenuItem
-                  image="https://i0.wp.com/vegecravings.com/wp-content/uploads/2017/03/samosa-recipe-step-by-step-instructions.jpg?fit=1801%2C1717&quality=65&strip=all&ssl=1"
-                  item="Samosa"
-                  price="20.00"
-                />
-                <MenuItem
-                  image="https://www.chefkunalkapur.com/wp-content/uploads/2021/03/veg-chowmein-min-scaled.jpg?v=1620296035"
-                  item="Chowmein Veg"
-                  price="30.00"
-                />
-                <MenuItem
-                  image="https://i.ytimg.com/vi/7wIMaLJvL0U/maxresdefault.jpg"
-                  item="Chowmein Non-Veg"
-                  price="30.00"
-                />
-                <MenuItem
-                  image="https://www.simplyrecipes.com/thmb/LLhiA8KZ7JZ5ZI0g-1bF1eg-gGM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__10__HT-Make-an-Omelet-LEAD-HORIZONTAL-17cd2e469c4a4ccbbd1273a7cae6425c.jpg"
-                  item="Omellete"
-                  price="20.00"
-                />
-                <MenuItem
-                  image="https://www.kannammacooks.com/wp-content/uploads/masala-poori-homemade-chaat-street-side-recipe-5.jpg"
-                  item="Chaat masala"
-                  price="30.00"
-                />
+                {menuItems.map((item) => {
+                  return (
+                    <MenuItem
+                      image={item.image}
+                      item={item.item}
+                      price={item.price}
+                      key={item.id}
+                    />
+                  );
+                })}
               </div>
             </div>
             <div className="item-table">
               <CafeteriaTable />
             </div>
             <div className="cart">
-              <div className="cart-content">
-                content
+              <div
+                className="cart-content"
+                style={
+                  cartClicked
+                    ? { visibility: "visible" }
+                    : { visibility: "collapse" }
+                }
+              >
+                <div className="cart-head">
+                  <h3>Your Cart</h3>
+                  <hr />
+                </div>
+                <div className="cart-items">
+                  {cart.map((item) => {
+                    return (
+                      <div className="cart-item" key={item.id}>
+                        <img src={item.item_image} alt="" />
+                        <div className="item-content">
+                          <h5>{item.item_name}</h5>
+                          <div className="item-para">
+                            <p>{`Price : Rs. ${item.item_price}/-`}</p>
+                            <p>{`Quantity : ${item.item_quantity}`}</p>
+                          </div>
+                        </div>
+                        <div className="item-price">
+                          <h3>{`Rs. ${
+                            item.item_price * item.item_quantity
+                          }/-`}</h3>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                <hr style={{ marginTop: "15%", width: "90%" }} />
+                <div className="cart-bottom-text">
+                  <h3>Total order</h3>
+                  <p>{`Rs. ${cart.reduce((x, y) => {
+                    return x + y.item_price * y.item_quantity;
+                  }, 0)}/-`}</p>
+                </div>
+                <div className="cart-buttons">
+                  <button className="cancel-button">Cancel</button>
+                  <button className="order-button">Order</button>
+                </div>
               </div>
-              <div className="cart-button">
+              <div
+                className="cart-button"
+                onClick={() => {
+                  setCartClicked(!cartClicked);
+                }}
+              >
                 <ShoppingCartIcon />
               </div>
             </div>
