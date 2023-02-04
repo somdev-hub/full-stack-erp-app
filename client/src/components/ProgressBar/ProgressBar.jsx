@@ -3,7 +3,7 @@ import React from "react";
 const ProgressBar = (props) => {
   const fullBar = {
     height: "20px",
-    width: "90%",
+    width: `${props.width}`,
     backgroundColor: `${props.backColor}`,
     borderRadius: "10px"
   };
@@ -13,8 +13,9 @@ const ProgressBar = (props) => {
     width: `${props.progress}%`,
     backgroundColor: `${props.color}`,
     textAlign: "right",
-    borderRadius: "inherit"
+    borderRadius: "inherit",
   };
+
   return (
     <div>
       <div className="" style={fullBar}>

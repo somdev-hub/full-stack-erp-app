@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CafeteriaTable.css";
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
-import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { cafeData } from "../../files/cafe";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import { useState } from "react";
+import CafeTableData from "../CafeTableData/CafeTableData";
 
 const CafeteriaTable = () => {
   const [checked, setChecked] = useState(false);
@@ -27,6 +24,7 @@ const CafeteriaTable = () => {
     "Availablity",
     "Quantity"
   ];
+  
   return (
     <div className="cafeteria-table">
       <div className="table-navbar">
@@ -54,46 +52,13 @@ const CafeteriaTable = () => {
         <tbody>
           {cafeData.map((item, index) => {
             return (
-              <tr className="cafe-data" key={index}>
-                <div className="row-content">
-                  <td>
-                    {/* <div
-                      className="select"
-                      onClick={() => {
-                        setChecked(!checked);
-                      }}
-                    >
-                      {checked ? <CheckBoxIcon /> : null}
-                    </div> */}
-                    <label htmlFor="" className="checkbox">
-                      <input type="checkbox" className="select" />
-                      <span className="checkmark"></span>
-                    </label>
-                  </td>
-                  <td>{index + 1}</td>
-                  <td>{item.item}</td>
-                  <td>{`Rs. ${item.price}/-`}</td>
-                  <td>{item.availablity}</td>
-                  <td>
-                    <div className="add-control">
-                      <RemoveCircleIcon
-                        style={{ cursor: "pointer" }}
-                        onClick={deleteQuantity}
-                      />
-                      <p>{quantity}</p>
-                      <AddCircleIcon
-                        style={{ cursor: "pointer" }}
-                        onClick={updateQuantity}
-                      />
-                    </div>
-                  </td>
-                </div>
-                <hr
-                  style={{
-                    width: "100%"
-                  }}
-                />
-              </tr>
+              <CafeTableData
+                index={index + 1}
+                item={item.item}
+                price={item.price}
+                availablity={item.availablity}
+                key={index}
+              />
             );
           })}
         </tbody>

@@ -30,3 +30,15 @@ tr {
   flex-direction: row;
   justify-content: space-around;
 }
+
+/* new table  */
+
+.roll-table tbody tr {
+  border-bottom: 1px solid #75746fb2;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.roll-table td {
+  text-align: left;
+}

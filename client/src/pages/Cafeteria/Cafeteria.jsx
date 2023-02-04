@@ -47,11 +47,7 @@ const Cafeteria = () => {
             <div className="cart">
               <div
                 className="cart-content"
-                style={
-                  cartClicked
-                    ? { visibility: "visible" }
-                    : { visibility: "collapse" }
-                }
+                style={cartClicked ? { display: "block" } : { display: "none" }}
               >
                 <div className="cart-head">
                   <h3>Your Cart</h3>

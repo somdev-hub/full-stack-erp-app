@@ -8,48 +8,48 @@
     "attendance": "75"
   },
   {
-    "id": 1,
-    "subject": "Data Structures",
+    "id": 2,
+    "subject": "OOPS",
     "branch": "CSE-A",
     "rollno": 26,
     "faculty": "Dr. S. K. Singh",
     "attendance": "75"
   },
   {
-    "id": 1,
-    "subject": "Data Structures",
+    "id": 3,
+    "subject": "Digital Logic Design",
     "branch": "CSE-A",
     "rollno": 26,
     "faculty": "Dr. S. K. Singh",
     "attendance": "75"
   },
   {
-    "id": 1,
-    "subject": "Data Structures",
+    "id": 4,
+    "subject": "Organisational Behaviour",
     "branch": "CSE-A",
     "rollno": 26,
     "faculty": "Dr. S. K. Singh",
     "attendance": "75"
   },
   {
-    "id": 1,
-    "subject": "Data Structures",
+    "id": 5,
+    "subject": "Environmental Science",
     "branch": "CSE-A",
     "rollno": 26,
     "faculty": "Dr. S. K. Singh",
     "attendance": "75"
   },
   {
-    "id": 1,
-    "subject": "Data Structures",
+    "id": 6,
+    "subject": "Mathematics - III",
     "branch": "CSE-A",
     "rollno": 26,
     "faculty": "Dr. S. K. Singh",
     "attendance": "75"
   },
   {
-    "id": 1,
-    "subject": "Data Structures",
+    "id": 7,
+    "subject": "Data Structures Lab",
     "branch": "CSE-A",
     "rollno": 26,
     "faculty": "Dr. S. K. Singh",

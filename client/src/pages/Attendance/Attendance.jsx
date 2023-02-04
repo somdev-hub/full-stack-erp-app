@@ -1,17 +1,19 @@
-import React, { useMemo } from "react";
-import { useTable } from "react-table";
+import React from "react";
 import "./Attendance.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import { columns as columnsHead } from "../../files/columns";
 import attendance from "../../files/attendance.json";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 const Attendance = () => {
-  const columns = useMemo(() => columnsHead, []);
-  const data = useMemo(() => attendance, []);
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
+  const tableHead = [
+    "Sl no",
+    "Subject",
+    "Branch/Section",
+    "Roll no",
+    "Faculty",
+    "Attendance"
+  ];
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <Sidebar />
@@ -20,30 +22,31 @@ const Attendance = () => {
         <div className="attendance-container">
           <h3 className="your-profile">Your Attendance</h3>
           <div className="attandance-table">
-            <table {...getTableProps()} className="attandence-table">
+            <table className="roll-table">
               <thead>
-                {headerGroups.map((headerGroup) => (
-                  <tr {...headerGroup.getHeaderGroupProps()}>
-                    {headerGroup.headers.map((column) => (
-                      <th {...column.getHeaderProps()}>
-                        {column.render("Header")}
-                      </th>
-                    ))}
-                  </tr>
-                ))}
+                <tr>
+                  {tableHead.map((item, index) => {
+                    return <th key={index}>{item}</th>;
+                  })}
+                </tr>
               </thead>
-              <tbody {...getTableBodyProps()} className="attendance-tbody">
-                {rows.map((row) => {
-                  prepareRow(row);
+              <tbody>
+                {attendance.map((item, index) => {
                   return (
-                    <tr {...row.getRowProps()} className="attendance-tr">
-                      {row.cells.map((cell) => {
-                        return (
-                          <td {...cell.getCellProps()}>
-                            {cell.render("Cell")}
-                          </td>
-                        );
-                      })}
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td>{item.subject}</td>
+                      <td>{item.branch}</td>
+                      <td>{item.rollno}</td>
+                      <td>{item.faculty}</td>
+                      <td style={{ display: "flex", justifyContent: "center" }}>
+                        <ProgressBar
+                          progress={item.attendance}
+                          backColor="#D9D9D9"
+                          color="#5800ff"
+                          width="12rem"
+                        />
+                      </td>
                     </tr>
                   );
                 })}

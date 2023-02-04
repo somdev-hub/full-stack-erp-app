@@ -35,6 +35,7 @@ const RectangularComponent1 = (props) => {
           progress={props.progress}
           color={props.progressColor}
           backColor={props.progressBackColor}
+          width="50"
         />
       </div>
     </div>
