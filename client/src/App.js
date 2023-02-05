@@ -9,6 +9,7 @@ import Login from "./pages/Login/Login";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Mail from "./pages/Mail/Mail";
 import Cafeteria from "./pages/Cafeteria/Cafeteria";
+import Transport from "./pages/Transport/Transport";
 
 function App() {
   const user = localStorage.getItem("token");
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about-us" exact element={<AboutUs />} />
         <Route path="/mail/:id" exact element={<Mail />} />
         <Route path="/cafeteria" exact element={<Cafeteria />} />
+        <Route path="/transport" exact element={<Transport />} />
       </Routes>
     </BrowserRouter>
   );

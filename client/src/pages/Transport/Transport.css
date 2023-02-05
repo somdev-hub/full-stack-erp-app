@@ -1,0 +1,40 @@
+.transport-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.transport-main h3,
+.transport-main h2,
+.transport-main p {
+  margin: 0;
+}
+
+.current-vehicle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url(../../files/transport_background.jpg);
+  border-radius: 20px;
+  height: 7rem;
+  color: #fff;
+  padding: 0 3%;
+  margin-top: 2%;
+  object-fit: contain;
+}
+
+.tracking-button button {
+  background: #ffffff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  width: 10rem;
+  height: 2.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracking-button button h5 {
+  font-size: 16px;
+  font-weight: 600;
+}

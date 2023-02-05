@@ -77,6 +77,11 @@
   right: 0;
 }
 
+.cart-button:hover{
+  background-color: #fff;
+  color: #000;
+}
+
 .cart-content {
   height: 30rem;
   width: 25rem;
