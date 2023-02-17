@@ -10,12 +10,14 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import Mail from "./pages/Mail/Mail";
 import Cafeteria from "./pages/Cafeteria/Cafeteria";
 import Transport from "./pages/Transport/Transport";
+import Index from "./landing page/Root/Index";
 
 function App() {
   const user = localStorage.getItem("token");
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/home" element={<Index />} />
         {user && <Route path="/" element={<Dashboard />} />}
         <Route path="/profile" element={<Profile />} />
         <Route path="/subjects" element={<Subjects />} />

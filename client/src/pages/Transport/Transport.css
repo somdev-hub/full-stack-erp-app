@@ -97,9 +97,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
 }
-
 
 .vehicles-and-options-grid {
   margin-top: 3%;
@@ -124,3 +122,4 @@
 .transport-notice {
   width: 40%;
 }
+
