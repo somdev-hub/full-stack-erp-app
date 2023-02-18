@@ -1,0 +1,55 @@
+.ad-container {
+  margin-top: 10%;
+  position: relative;
+}
+
+.bubble8,
+.bubble9,
+.bubble10 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.bubble8 {
+  background: radial-gradient(
+    141.08% 141.08% at 50% 50%,
+    rgba(248, 249, 136, 0.24) 0%,
+    rgba(248, 249, 136, 0.5) 100%
+  );
+  top: 20%;
+  left: 28%;
+  z-index: 0;
+}
+
+.bubble9 {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(88, 0, 255, 0.5) 0%,
+    rgba(114, 255, 255, 0.1) 100%
+  );
+  top: 0;
+  right: 10%;
+}
+
+.bubble10 {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(88, 0, 255, 0.5) 0%,
+    rgba(114, 255, 255, 0.1) 100%
+  );
+  top: 45%;
+  right: 27%;
+}
+
+.ad-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-image img {
+  width: 50%;
+  z-index: 1;
+}
